@@ -1,70 +1,24 @@
 # sketch-03-path-around-a-circle
 Explored the circular formular around a circle
-
-
-const canvasSketch = require('canvas-sketch');
-const maht = require("canvas-sketch-util/math");
-
-const settings = {
-  dimensions: [ 1080, 1080 ]
-};
-
-const sketch = () => {
-  return ({ context, width, height }) => {
-    context.fillStyle = 'black';
-    context.fillRect(0, 0, width, height);
-
-    const degToRad = (degrees) => {
-      return degrees / 180 * Math.PI;
-    };
-
-    const randomRange = (min, max) => {
-      return Math.random() * (max - min) + min;
-    };
-
-
-    const cx = width/2;
-    const cy = height/2;
-    
-    const diameter = 1;
-
-    let x, y;
-    
-    const num = 12;
-    const radius = width * 0.2;
-
- 
-
-    for (let j = 0; j < 1000; j++){
-      for (let i = 0; i < num; i++) {
-        const slice = degToRad(360 / num);
-        const angle = (slice * i);
-  
-  
-        x = cx + (radius + j + randomRange(9,10)) * Math.sin((j * 0.23) + angle);
-        y = cy + (radius + j + randomRange(9,10)) * Math.cos((j * 0.23) + angle);
-  
-  
-        context.save();
-        context.beginPath();
-        context.translate(x, y);
-        //context.rotate(-angle);
-        context.arc (0, 0, diameter + Math.cos(j), 0, degToRad(360));
-        context.fillStyle = "white";
-        context.fill();
-        context.restore();
-
-
-        // context.save();
-        // context.beginPath();
-        // context.arc(0,0, diameter, 0, degToRad(360));
-        // context.fill();
-        // context.restore();
-      }
-    }
-
-  };
-};
-
-canvasSketch(sketch, settings);
-
+![2022 02 13-02 15 53](https://user-images.githubusercontent.com/38114453/154781443-e57f6d2d-ba5c-4233-9e5c-81baf28298b0.png)
+![2022 02 13-02 30 39](https://user-images.githubusercontent.com/38114453/154781447-71fe1e89-8111-41cd-b6dd-d88fe2ee4e53.png)
+![2022 02 13-02 30 40](https://user-images.githubusercontent.com/38114453/154781448-50285403-811f-42d8-b889-eaaacacfd6ba.png)
+![2022 02 13-02 31 19](https://user-images.githubusercontent.com/38114453/154781449-e6872e8f-be2a-4936-9474-92f9280cda41.png)
+![2022 02 13-02 31 20](https://user-images.githubusercontent.com/38114453/154781450-fb76c333-bfe6-4a01-8551-47f9520fba14.png)
+![2022 02 13-02 32 31](https://user-images.githubusercontent.com/38114453/154781452-22f10c15-c081-4125-a806-10eaa4f4b043.png)
+![2022 02 13-02 34 44](https://user-images.githubusercontent.com/38114453/154781453-383cc8f8-4879-4885-a351-242efa188602.png)
+![2022 02 13-02 42 35](https://user-images.githubusercontent.com/38114453/154781454-c8c52ea5-11b8-4977-8384-9b710b6aae49.png)
+![2022 02 13-02 42 36](https://user-images.githubusercontent.com/38114453/154781456-649b1d9a-2178-4aa3-9cdc-ab9ca18076cd.png)
+![2022 02 13-02 43 11](https://user-images.githubusercontent.com/38114453/154781457-6522c1f0-2945-46c8-90f0-a2cca525a8dd.png)
+![2022 02 13-02 43 35](https://user-images.githubusercontent.com/38114453/154781459-5e264ed4-6524-48b2-b60f-5c40d290178c.png)
+![2022 02 13-02 43 37](https://user-images.githubusercontent.com/38114453/154781460-9c7a1907-3df0-416d-9ab1-bbc70b584cab.png)
+![2022 02 13-02 47 47](https://user-images.githubusercontent.com/38114453/154781461-f7fb6182-d75a-4492-ae6c-028b8acca7bd.png)
+![2022 02 13-02 47 49](https://user-images.githubusercontent.com/38114453/154781462-4cfd5e19-3228-4646-8f95-4076dc01d637.png)
+![2022 02 13-02 47 50](https://user-images.githubusercontent.com/38114453/154781463-9d89aea3-75ca-496d-9e36-9785f29f07c5.png)
+![2022 02 13-02 59 44](https://user-images.githubusercontent.com/38114453/154781465-62ed6206-2286-4938-97b2-092755a5647f.png)
+![2022 02 13-02 59 46](https://user-images.githubusercontent.com/38114453/154781466-60062da0-6b22-4d99-85f5-50c2d31249a7.png)
+![2022 02 13-03 41 18](https://user-images.githubusercontent.com/38114453/154781468-15487a94-e4e7-4e01-ab78-418c2c860e7d.png)
+![2022 02 13-03 41 19](https://user-images.githubusercontent.com/38114453/154781469-e4d00d0c-f770-421e-b3fe-be61011ce91b.png)
+![2022 02 13-03 42 09](https://user-images.githubusercontent.com/38114453/154781470-cc179b6b-ad1e-4ac4-8c93-b05268cbd02e.png)
+![2022 02 13-03 43 08](https://user-images.githubusercontent.com/38114453/154781471-cac3933d-a17d-4588-97f0-1768a2b9c58f.png)
+![download](https://user-images.githubusercontent.com/38114453/154781472-5e102853-3f65-4353-9af5-361bdc17ca86.png)
